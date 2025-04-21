@@ -13,10 +13,6 @@ public class ColaDigimon {
         this.cola.add(new Digimon("Veemon","Agua",150,"Aletazo","Curado"));
         this.cola.add(new Digimon("Turtlemon","Bestia",200,"Coraza celestial","Evolucionando"));
         this.cola.add(new Digimon("Elecmon","Electrico",175,"Chispazo","Desmayado"));
-        this.cola.add(new Digimon("Turtlemon","Bestia",200,"Coraza celestial","Evolucionando"));
-        this.cola.add(new Digimon("Elecmon","Electrico",175,"Chispazo","Desmayado"));
-        this.cola.add(new Digimon("Turtlemon","Bestia",200,"Coraza celestial","Evolucionando"));
-        this.cola.add(new Digimon("Elecmon","Electrico",175,"Chispazo","Desmayado"));
     }
 
     public StringBuilder actualizarTabla(){
@@ -29,20 +25,25 @@ public class ColaDigimon {
     }
 
 
-    public String poderTotalR2(JTextArea txtArea) {
+    public StringBuilder poderTotalR2() {
         StringBuilder sb = new StringBuilder();
         while (!cola.isEmpty()) {
             Digimon digimon = cola.poll();
+            sb.append(digimon.getNombre())
+                    .append("\n")
+                    .append("Nivel de poder actual: ");
             if(digimon.getTipo().equalsIgnoreCase("fuego")){
-                sb.append(digimon.getNivelPoder() * 1.3);
+                sb.append(String.format("%.2f", digimon.getNivelPoder() * 1.3));
             } else if ( digimon.getTipo().equalsIgnoreCase("Agua")) {
-                sb.append(digimon.getNivelPoder() * 1.5);
+                sb.append(String.format("%.2f", digimon.getNivelPoder() * 1.5));
             } else if (digimon.getTipo().equalsIgnoreCase("Planta")) {
-                sb.append(digimon.getNivelPoder() * 1.2);
-            }
-            sb.append(digimon.getNivelPoder());
+                sb.append(String.format("%.2f", digimon.getNivelPoder() * 1.2));
+            }else
+                sb.append(digimon.getNivelPoder());
+            sb.append("\n")
+                    .append("\n");
         }
-        return sb.toString();
+        return sb;
     }
 
 

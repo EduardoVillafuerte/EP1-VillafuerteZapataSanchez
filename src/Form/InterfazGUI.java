@@ -16,15 +16,27 @@ public class InterfazGUI {
     private JButton btnIniciar;
     private JTextArea txtResultado;
     private JTextArea txtBuscar;
-    ColaDigimon  c = new ColaDigimon();
-
 
     public InterfazGUI() {
         btnEncolar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                txtVisualizarCola.setText("");
+                ColaDigimon  c = new ColaDigimon();
                 txtVisualizarCola.append(c.actualizarTabla().toString());
+            }
+        });
+        btnBuscar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        btnCalcular.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ColaDigimon  c = new ColaDigimon();
+                txtResultado.append(c.poderTotalR2().toString());
             }
         });
     }
