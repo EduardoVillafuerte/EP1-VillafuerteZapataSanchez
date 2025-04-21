@@ -29,4 +29,22 @@ public class ColaDigimon {
     }
 
 
+    public String poderTotalR2(JTextArea txtArea) {
+        StringBuilder sb = new StringBuilder();
+        while (!cola.isEmpty()) {
+            Digimon digimon = cola.poll();
+            if(digimon.getTipo().equalsIgnoreCase("fuego")){
+                sb.append(digimon.getNivelPoder() * 1.3);
+            } else if ( digimon.getTipo().equalsIgnoreCase("Agua")) {
+                sb.append(digimon.getNivelPoder() * 1.5);
+            } else if (digimon.getTipo().equalsIgnoreCase("Planta")) {
+                sb.append(digimon.getNivelPoder() * 1.2);
+            }
+            sb.append(digimon.getNivelPoder());
+        }
+        return sb.toString();
+    }
+
+
+
 }
