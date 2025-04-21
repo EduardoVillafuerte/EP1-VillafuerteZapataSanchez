@@ -7,7 +7,7 @@ import java.util.Queue;
 public class ColaDigimon {
     private Queue<Digimon> cola = new LinkedList<>();
 
-    public ColaDigimon(Queue<Digimon> cola) {
+    public ColaDigimon() {
         this.cola.add(new Digimon());
         this.cola.add(new Digimon());
         this.cola.add(new Digimon());
