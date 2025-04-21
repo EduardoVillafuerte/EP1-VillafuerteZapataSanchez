@@ -16,7 +16,8 @@ public class ColaDigimon {
     }
 
     public void actualizarTabla(JTextArea txtArea){
-        //txtArea.append();
+        while(!cola.isEmpty())
+            txtArea.append(cola.poll().toString());
     }
 
 }
