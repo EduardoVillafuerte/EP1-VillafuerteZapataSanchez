@@ -9,15 +9,20 @@ public class ColaDigimon {
 
     public ColaDigimon() {
         this.cola.add(new Digimon());
-        this.cola.add(new Digimon());
-        this.cola.add(new Digimon());
-        this.cola.add(new Digimon());
-        this.cola.add(new Digimon());
+        this.cola.add(new Digimon("Patamon","Volador",100,"Toque pluma","Debilitado"));
+        this.cola.add(new Digimon("Veemon","Agua",150,"Aletazo","Curado"));
+        this.cola.add(new Digimon("Turtlemon","Bestia",200,"Coraza celestial","Evolucionando"));
+        this.cola.add(new Digimon("Elecmon","Electrico",175,"Chispazo","Desmayado"));
     }
 
-    public void actualizarTabla(JTextArea txtArea){
+    public StringBuilder actualizarTabla(){
+
+        StringBuilder sb = new StringBuilder();
         while(!cola.isEmpty())
-            txtArea.append(cola.poll().toString());
+            sb.append(cola.poll().toString());
+
+        return sb;
     }
+
 
 }

@@ -55,7 +55,7 @@ public class Digimon {
                 ", tipo='" + tipo + '\n' +
                 ", nivelPoder=" + nivelPoder + '\n' +
                 ", habilidad='" + habilidad + '\n' +
-                ", estado='" + estado + '\n';
+                ", estado='" + estado + '\n'+'\n';
     }
 }
 

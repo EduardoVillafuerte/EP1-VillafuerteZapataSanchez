@@ -23,7 +23,8 @@ public class InterfazGUI {
         btnEncolar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                c.actualizarTabla(txtVisualizarCola);
+                txtVisualizarCola.setText("");
+                txtVisualizarCola.append(c.actualizarTabla().toString());
             }
         });
     }
