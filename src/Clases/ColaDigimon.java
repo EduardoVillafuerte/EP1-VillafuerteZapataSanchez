@@ -13,6 +13,10 @@ public class ColaDigimon {
         this.cola.add(new Digimon("Veemon","Agua",150,"Aletazo","Curado"));
         this.cola.add(new Digimon("Turtlemon","Bestia",200,"Coraza celestial","Evolucionando"));
         this.cola.add(new Digimon("Elecmon","Electrico",175,"Chispazo","Desmayado"));
+        this.cola.add(new Digimon("Turtlemon","Bestia",200,"Coraza celestial","Evolucionando"));
+        this.cola.add(new Digimon("Elecmon","Electrico",175,"Chispazo","Desmayado"));
+        this.cola.add(new Digimon("Turtlemon","Bestia",200,"Coraza celestial","Evolucionando"));
+        this.cola.add(new Digimon("Elecmon","Electrico",175,"Chispazo","Desmayado"));
     }
 
     public StringBuilder actualizarTabla(){
