@@ -21,6 +21,7 @@ public class InterfazGUI {
         btnEncolar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                txtVisualizarCola.setText("");
                 ColaDigimon  c = new ColaDigimon();
                 txtVisualizarCola.append(c.actualizarTabla().toString());
             }
@@ -28,13 +29,16 @@ public class InterfazGUI {
         btnBuscar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                txtBuscar.setText("");
+                ColaDigimon  c = new ColaDigimon();
+                txtBuscar.append(c.colaPorHabilidad(textFieldHabilidad.getText()).toString());
             }
         });
 
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                txtResultado.setText("");
                 ColaDigimon  c = new ColaDigimon();
                 txtResultado.append(c.poderTotalR2().toString());
             }

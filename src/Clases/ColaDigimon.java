@@ -46,6 +46,22 @@ public class ColaDigimon {
         return sb;
     }
 
+    public StringBuilder colaPorHabilidad(String habilidad){
+        StringBuilder sb = new StringBuilder();
+        Queue<Digimon> colaHabilidad = new LinkedList<>();
 
+        while(!cola.isEmpty()){
+            Digimon digimon = cola.poll();
+            if(digimon.getHabilidad().equalsIgnoreCase(habilidad)){
+                colaHabilidad.add(digimon);
+            }
+        }
+
+        while(!colaHabilidad.isEmpty()){
+            sb.append(colaHabilidad.poll().toString());
+        }
+
+        return sb;
+    }
 
 }
