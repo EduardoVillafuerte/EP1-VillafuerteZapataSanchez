@@ -1,12 +1,13 @@
 package Clases;
 
-import javax.swing.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class ColaDigimon {
+
     private Queue<Digimon> cola = new LinkedList<>();
 
+    //Se crean los digimones con construtors por defecto y valores predefinidos
     public ColaDigimon() {
         this.cola.add(new Digimon());
         this.cola.add(new Digimon("Patamon","Volador",100,"Toque pluma","Debilitado"));
@@ -15,6 +16,8 @@ public class ColaDigimon {
         this.cola.add(new Digimon("Elecmon","Electrico",175,"Chispazo","Desmayado"));
     }
 
+
+    // Se presentan los datos en el Text Area
     public StringBuilder actualizarTabla(){
 
         StringBuilder sb = new StringBuilder();
@@ -24,7 +27,7 @@ public class ColaDigimon {
         return sb;
     }
 
-
+    // Se suma el poder de los digimon segun los tipos se suman un nivel extra
     public StringBuilder poderTotalR2() {
         StringBuilder sb = new StringBuilder();
         while (!cola.isEmpty()) {
@@ -46,6 +49,8 @@ public class ColaDigimon {
         return sb;
     }
 
+
+    //Se crea una nueva cola segun la habilidad que se desdea buscar, y se añade en una nueva cola
     public StringBuilder colaPorHabilidad(String habilidad){
         StringBuilder sb = new StringBuilder();
         Queue<Digimon> colaHabilidad = new LinkedList<>();
@@ -64,6 +69,8 @@ public class ColaDigimon {
         return sb;
     }
 
+
+    // Según el nivel de poder que sea mayor a 150 se puede evoliucionar y cambia el estado a Evolucionado
     public StringBuilder evolucionar(){
         StringBuilder sb = new StringBuilder();
         while(!cola.isEmpty()){
