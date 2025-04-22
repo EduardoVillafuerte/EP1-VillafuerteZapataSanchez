@@ -69,11 +69,14 @@ public class ColaDigimon {
         while(!cola.isEmpty()){
             Digimon digimon = cola.poll();
             if(digimon.getNivelPoder() > 150){
+                digimon.setEstado("Evolucionado");
                 sb.append(digimon.getNombre())
                         .append("Evo")
                         .append("\n")
                         .append("Nuevo nivel de poder: ")
                         .append(digimon.getNivelPoder()*1.20)
+                        .append("\nEstado: \n")
+                        .append(digimon.getEstado())
                         .append("\n");
             }
         }
