@@ -64,4 +64,20 @@ public class ColaDigimon {
         return sb;
     }
 
+    public StringBuilder evolucionar(){
+        StringBuilder sb = new StringBuilder();
+        while(!cola.isEmpty()){
+            Digimon digimon = cola.poll();
+            if(digimon.getNivelPoder() > 150){
+                sb.append(digimon.getNombre())
+                        .append("Evo")
+                        .append("\n")
+                        .append("Nuevo nivel de poder: ")
+                        .append(digimon.getNivelPoder()*1.20)
+                        .append("\n");
+            }
+        }
+        return sb;
+    }
+
 }

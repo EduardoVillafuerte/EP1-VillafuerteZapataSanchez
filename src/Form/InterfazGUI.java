@@ -13,9 +13,10 @@ public class InterfazGUI {
     private JButton btnCalcular;
     private JTextField textFieldHabilidad;
     private JButton btnBuscar;
-    private JButton btnIniciar;
     private JTextArea txtResultado;
     private JTextArea txtBuscar;
+    private JTextArea txtEvolucion;
+    private JButton bntEvolucion;
 
     public InterfazGUI() {
         btnEncolar.addActionListener(new ActionListener() {
@@ -41,6 +42,14 @@ public class InterfazGUI {
                 txtResultado.setText("");
                 ColaDigimon  c = new ColaDigimon();
                 txtResultado.append(c.poderTotalR2().toString());
+            }
+        });
+        bntEvolucion.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                txtEvolucion.setText("");
+                ColaDigimon c = new ColaDigimon();
+                txtEvolucion.append(c.evolucionar().toString());
             }
         });
     }
